@@ -1,0 +1,3 @@
+verilog isim_temp "../Assignment2/program_memory.v"
+verilog isim_temp "program_memory_tb.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

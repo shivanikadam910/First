@@ -1,0 +1,4 @@
+verilog isim_temp "RSA.v"
+verilog isim_temp "ALU_16bit.v"
+verilog isim_temp "ALU-16bit_tb.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

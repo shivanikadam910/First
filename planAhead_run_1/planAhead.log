@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Thu Dec 12 15:16:48 2019
+# Process ID: 17168
+# Log file: D:/clg/CO_lab/Assignment1/planAhead_run_1/planAhead.log
+# Journal file: D:/clg/CO_lab/Assignment1/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -1564 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source D:/clg/CO_lab/Assignment1/pa.fromNetlist.tcl
+# create_project -name Assignment1 -dir "D:/clg/CO_lab/Assignment1/planAhead_run_1" -part xc7a100tcsg324-1
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "D:/clg/CO_lab/Assignment1/top.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {D:/clg/CO_lab/Assignment1} {ipcore_dir} }
+# add_files [list {ipcore_dir/d_memory.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/instruction.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/pgm_memory.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/pm_memory.ncf}] -fileset [get_property constrset [current_run]]
+# add_files [list {ipcore_dir/p_memory.ncf}] -fileset [get_property constrset [current_run]]
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "C:/Users/Shivani Kadam/Downloads/mips_16bit.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/Shivani Kadam/Downloads/mips_16bit.ucf' to fileset 'constrs_1'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'source' was cancelled
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+ (See D:/clg/CO_lab/Assignment1\planAhead_pid17168.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Dec 12 15:17:12 2019...
+INFO: [Common 17-83] Releasing license: PlanAhead

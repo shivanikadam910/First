@@ -1,0 +1,2 @@
+vhdtdtfi -lib work D:/S123/CO_lab/Assignment1/wallace_16bit.v -lang verilog -prj Assignment1 -o wallace_16bit.spl -module wallace_16bit -template C:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 wallace_16bit.spl D:/S123/CO_lab/Assignment1/wallace_16bit.sym 

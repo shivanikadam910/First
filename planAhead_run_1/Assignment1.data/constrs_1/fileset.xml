@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DARoots Version="1" Minor="26">
+  <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../ipcore_dir/d_memory.ncf">
+      <FileInfo>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ipcore_dir/instruction.ncf">
+      <FileInfo>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ipcore_dir/pgm_memory.ncf">
+      <FileInfo>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ipcore_dir/pm_memory.ncf">
+      <FileInfo>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ipcore_dir/p_memory.ncf">
+      <FileInfo>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="C:/Users/Shivani Kadam/Downloads/mips_16bit.ucf">
+      <FileInfo>
+        <Attr Name="UsedInSynthesis" Val="1"/>
+        <Attr Name="UsedInImplementation" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="C:/Users/Shivani Kadam/Downloads/mips_16bit.ucf"/>
+      <Option Name="ConstrsType" Val="UCF"/>
+    </Config>
+  </FileSet>
+</DARoots>

@@ -1,0 +1,9 @@
+[Inputs]
+=A[15:0]=
+=B[15:0]=
+[Outputs]
+=Z[31:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel wallace_16bit
+

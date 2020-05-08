@@ -1,0 +1,1266 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc7a100t-1-csg324
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\wallace_16bit.v" into library work
+Parsing module <wallace_16bit>.
+Parsing module <HA>.
+Parsing module <FA>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\ipcore_dir\pm_memory.v" into library work
+Parsing module <pm_memory>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\ipcore_dir\d_memory.v" into library work
+Parsing module <d_memory>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\write_back.v" into library work
+Parsing module <write_back>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\stall_control.v" into library work
+Parsing module <stall_control>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\Register_bank.v" into library work
+Parsing module <Register_bank>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\prog_memory.v" into library work
+Parsing module <prog_memory>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\jump_control_block.v" into library work
+Parsing module <jump_control_block>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\Dependency_check_block.v" into library work
+Parsing module <Dependency_check_block>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\Data_memory.v" into library work
+Parsing module <Data_memory>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\ALU_16bit.v" into library work
+Parsing module <ALU_16bit>.
+Parsing module <right_shift>.
+Analyzing Verilog file "D:\clg\CO_lab\Assignment1\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <ALU_16bit>.
+
+Elaborating module <wallace_16bit>.
+
+Elaborating module <HA>.
+
+Elaborating module <FA>.
+
+Elaborating module <right_shift>.
+WARNING:HDLCompiler:189 - "D:\clg\CO_lab\Assignment1\ALU_16bit.v" Line 46: Size mismatch in connection of port <B1>. Formal port size is 4-bit while actual signal size is 16-bit.
+WARNING:HDLCompiler:1127 - "D:\clg\CO_lab\Assignment1\ALU_16bit.v" Line 78: Assignment to flag_prv ignored, since the identifier is never used
+
+Elaborating module <Data_memory>.
+
+Elaborating module <d_memory>.
+WARNING:HDLCompiler:1499 - "D:\clg\CO_lab\Assignment1\ipcore_dir\d_memory.v" Line 39: Empty module <d_memory> remains a black box.
+
+Elaborating module <Dependency_check_block>.
+WARNING:HDLCompiler:1127 - "D:\clg\CO_lab\Assignment1\Dependency_check_block.v" Line 41: Assignment to reg3 ignored, since the identifier is never used
+
+Elaborating module <jump_control_block>.
+
+Elaborating module <prog_memory>.
+
+Elaborating module <pm_memory>.
+WARNING:HDLCompiler:1499 - "D:\clg\CO_lab\Assignment1\ipcore_dir\pm_memory.v" Line 39: Empty module <pm_memory> remains a black box.
+
+Elaborating module <Register_bank>.
+WARNING:HDLCompiler:1127 - "D:\clg\CO_lab\Assignment1\top.v" Line 59: Assignment to AR ignored, since the identifier is never used
+
+Elaborating module <stall_control>.
+
+Elaborating module <write_back>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "D:\clg\CO_lab\Assignment1\top.v".
+INFO:Xst:3210 - "D:\clg\CO_lab\Assignment1\top.v" line 59: Output port <AR> of the instance <a3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\clg\CO_lab\Assignment1\top.v" line 59: Output port <BR> of the instance <a3> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <ALU_16bit>.
+    Related source file is "D:\clg\CO_lab\Assignment1\ALU_16bit.v".
+    Found 16-bit register for signal <data_out>.
+    Found 16-bit register for signal <DM_data>.
+    Found 16-bit register for signal <ans_ex>.
+    Found 16-bit adder for signal <B[15]_GND_2_o_add_3_OUT> created at line 39.
+    Found 16-bit adder for signal <n0144> created at line 42.
+    Found 2-bit adder for signal <n0148> created at line 43.
+    Found 2-bit adder for signal <n0092> created at line 43.
+    Found 16-bit shifter logical left for signal <A[15]_B[15]_shift_left_45_OUT> created at line 69
+    Found 16-bit shifter logical right for signal <A[15]_B[15]_shift_right_47_OUT> created at line 70
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  48 D-type flip-flop(s).
+	inferred  18 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <ALU_16bit> synthesized.
+
+Synthesizing Unit <wallace_16bit>.
+    Related source file is "D:\clg\CO_lab\Assignment1\wallace_16bit.v".
+INFO:Xst:3210 - "D:\clg\CO_lab\Assignment1\wallace_16bit.v" line 387: Output port <S> of the instance <f139> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\clg\CO_lab\Assignment1\wallace_16bit.v" line 633: Output port <carry> of the instance <h52> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <wallace_16bit> synthesized.
+
+Synthesizing Unit <HA>.
+    Related source file is "D:\clg\CO_lab\Assignment1\wallace_16bit.v".
+    Summary:
+Unit <HA> synthesized.
+
+Synthesizing Unit <FA>.
+    Related source file is "D:\clg\CO_lab\Assignment1\wallace_16bit.v".
+    Found 2-bit adder for signal <n0011> created at line 656.
+    Found 2-bit adder for signal <temp> created at line 656.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+Unit <FA> synthesized.
+
+Synthesizing Unit <right_shift>.
+    Related source file is "D:\clg\CO_lab\Assignment1\ALU_16bit.v".
+    Found 16-bit shifter arithmetic right for signal <out> created at line 100
+    Summary:
+	inferred   1 Combinational logic shifter(s).
+Unit <right_shift> synthesized.
+
+Synthesizing Unit <Data_memory>.
+    Related source file is "D:\clg\CO_lab\Assignment1\Data_memory.v".
+    Found 16-bit register for signal <Ex_out>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <Data_memory> synthesized.
+
+Synthesizing Unit <Dependency_check_block>.
+    Related source file is "D:\clg\CO_lab\Assignment1\Dependency_check_block.v".
+    Found 6-bit register for signal <op_dec>.
+    Found 16-bit register for signal <imm>.
+    Found 1-bit register for signal <imm_sel>.
+    Found 1-bit register for signal <q2>.
+    Found 1-bit register for signal <mem_rw_ex>.
+    Found 1-bit register for signal <q3>.
+    Found 1-bit register for signal <q4>.
+    Found 1-bit register for signal <mem_en_ex>.
+    Found 1-bit register for signal <q5>.
+    Found 1-bit register for signal <mem_mux_sel_dm>.
+    Found 5-bit register for signal <reg1>.
+    Found 5-bit register for signal <reg2>.
+    Found 5-bit register for signal <reg4>.
+    Found 5-bit register for signal <reg5>.
+    Found 5-bit register for signal <reg6>.
+    Found 5-bit register for signal <RW_dm>.
+    Found 1-bit register for signal <q1>.
+    Found 5-bit comparator equal for signal <comp1> created at line 89
+    Found 5-bit comparator equal for signal <comp2> created at line 90
+    Found 5-bit comparator equal for signal <comp3> created at line 91
+    Found 5-bit comparator equal for signal <comp4> created at line 92
+    Found 5-bit comparator equal for signal <comp5> created at line 93
+    Found 5-bit comparator equal for signal <comp6> created at line 94
+    Summary:
+	inferred  61 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   4 Multiplexer(s).
+Unit <Dependency_check_block> synthesized.
+
+Synthesizing Unit <jump_control_block>.
+    Related source file is "D:\clg\CO_lab\Assignment1\jump_control_block.v".
+    Found 1-bit register for signal <flag_ex_sel>.
+    Found 16-bit register for signal <current_address_tmp>.
+    Found 2-bit register for signal <flag_ex_tmp>.
+    Found 1-bit register for signal <jmp_address_pm_sel>.
+    Found 16-bit adder for signal <next_address> created at line 66.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <jump_control_block> synthesized.
+
+Synthesizing Unit <prog_memory>.
+    Related source file is "D:\clg\CO_lab\Assignment1\prog_memory.v".
+    Found 16-bit register for signal <hold_address>.
+    Found 16-bit register for signal <next_address>.
+    Found 32-bit register for signal <ins_prv>.
+    Found 16-bit adder for signal <current_address[15]_GND_13_o_add_12_OUT> created at line 55.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  64 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <prog_memory> synthesized.
+
+Synthesizing Unit <Register_bank>.
+    Related source file is "D:\clg\CO_lab\Assignment1\Register_bank.v".
+    Found 1-bit register for signal <register<31><14>>.
+    Found 1-bit register for signal <register<31><13>>.
+    Found 1-bit register for signal <register<31><12>>.
+    Found 1-bit register for signal <register<31><11>>.
+    Found 1-bit register for signal <register<31><10>>.
+    Found 1-bit register for signal <register<31><9>>.
+    Found 1-bit register for signal <register<31><8>>.
+    Found 1-bit register for signal <register<31><7>>.
+    Found 1-bit register for signal <register<31><6>>.
+    Found 1-bit register for signal <register<31><5>>.
+    Found 1-bit register for signal <register<31><4>>.
+    Found 1-bit register for signal <register<31><3>>.
+    Found 1-bit register for signal <register<31><2>>.
+    Found 1-bit register for signal <register<31><1>>.
+    Found 1-bit register for signal <register<31><0>>.
+    Found 1-bit register for signal <register<30><15>>.
+    Found 1-bit register for signal <register<30><14>>.
+    Found 1-bit register for signal <register<30><13>>.
+    Found 1-bit register for signal <register<30><12>>.
+    Found 1-bit register for signal <register<30><11>>.
+    Found 1-bit register for signal <register<30><10>>.
+    Found 1-bit register for signal <register<30><9>>.
+    Found 1-bit register for signal <register<30><8>>.
+    Found 1-bit register for signal <register<30><7>>.
+    Found 1-bit register for signal <register<30><6>>.
+    Found 1-bit register for signal <register<30><5>>.
+    Found 1-bit register for signal <register<30><4>>.
+    Found 1-bit register for signal <register<30><3>>.
+    Found 1-bit register for signal <register<30><2>>.
+    Found 1-bit register for signal <register<30><1>>.
+    Found 1-bit register for signal <register<30><0>>.
+    Found 1-bit register for signal <register<29><15>>.
+    Found 1-bit register for signal <register<29><14>>.
+    Found 1-bit register for signal <register<29><13>>.
+    Found 1-bit register for signal <register<29><12>>.
+    Found 1-bit register for signal <register<29><11>>.
+    Found 1-bit register for signal <register<29><10>>.
+    Found 1-bit register for signal <register<29><9>>.
+    Found 1-bit register for signal <register<29><8>>.
+    Found 1-bit register for signal <register<29><7>>.
+    Found 1-bit register for signal <register<29><6>>.
+    Found 1-bit register for signal <register<29><5>>.
+    Found 1-bit register for signal <register<29><4>>.
+    Found 1-bit register for signal <register<29><3>>.
+    Found 1-bit register for signal <register<29><2>>.
+    Found 1-bit register for signal <register<29><1>>.
+    Found 1-bit register for signal <register<29><0>>.
+    Found 1-bit register for signal <register<28><15>>.
+    Found 1-bit register for signal <register<28><14>>.
+    Found 1-bit register for signal <register<28><13>>.
+    Found 1-bit register for signal <register<28><12>>.
+    Found 1-bit register for signal <register<28><11>>.
+    Found 1-bit register for signal <register<28><10>>.
+    Found 1-bit register for signal <register<28><9>>.
+    Found 1-bit register for signal <register<28><8>>.
+    Found 1-bit register for signal <register<28><7>>.
+    Found 1-bit register for signal <register<28><6>>.
+    Found 1-bit register for signal <register<28><5>>.
+    Found 1-bit register for signal <register<28><4>>.
+    Found 1-bit register for signal <register<28><3>>.
+    Found 1-bit register for signal <register<28><2>>.
+    Found 1-bit register for signal <register<28><1>>.
+    Found 1-bit register for signal <register<28><0>>.
+    Found 1-bit register for signal <register<27><15>>.
+    Found 1-bit register for signal <register<27><14>>.
+    Found 1-bit register for signal <register<27><13>>.
+    Found 1-bit register for signal <register<27><12>>.
+    Found 1-bit register for signal <register<27><11>>.
+    Found 1-bit register for signal <register<27><10>>.
+    Found 1-bit register for signal <register<27><9>>.
+    Found 1-bit register for signal <register<27><8>>.
+    Found 1-bit register for signal <register<27><7>>.
+    Found 1-bit register for signal <register<27><6>>.
+    Found 1-bit register for signal <register<27><5>>.
+    Found 1-bit register for signal <register<27><4>>.
+    Found 1-bit register for signal <register<27><3>>.
+    Found 1-bit register for signal <register<27><2>>.
+    Found 1-bit register for signal <register<27><1>>.
+    Found 1-bit register for signal <register<27><0>>.
+    Found 1-bit register for signal <register<26><15>>.
+    Found 1-bit register for signal <register<26><14>>.
+    Found 1-bit register for signal <register<26><13>>.
+    Found 1-bit register for signal <register<26><12>>.
+    Found 1-bit register for signal <register<26><11>>.
+    Found 1-bit register for signal <register<26><10>>.
+    Found 1-bit register for signal <register<26><9>>.
+    Found 1-bit register for signal <register<26><8>>.
+    Found 1-bit register for signal <register<26><7>>.
+    Found 1-bit register for signal <register<26><6>>.
+    Found 1-bit register for signal <register<26><5>>.
+    Found 1-bit register for signal <register<26><4>>.
+    Found 1-bit register for signal <register<26><3>>.
+    Found 1-bit register for signal <register<26><2>>.
+    Found 1-bit register for signal <register<26><1>>.
+    Found 1-bit register for signal <register<26><0>>.
+    Found 1-bit register for signal <register<25><15>>.
+    Found 1-bit register for signal <register<25><14>>.
+    Found 1-bit register for signal <register<25><13>>.
+    Found 1-bit register for signal <register<25><12>>.
+    Found 1-bit register for signal <register<25><11>>.
+    Found 1-bit register for signal <register<25><10>>.
+    Found 1-bit register for signal <register<25><9>>.
+    Found 1-bit register for signal <register<25><8>>.
+    Found 1-bit register for signal <register<25><7>>.
+    Found 1-bit register for signal <register<25><6>>.
+    Found 1-bit register for signal <register<25><5>>.
+    Found 1-bit register for signal <register<25><4>>.
+    Found 1-bit register for signal <register<25><3>>.
+    Found 1-bit register for signal <register<25><2>>.
+    Found 1-bit register for signal <register<25><1>>.
+    Found 1-bit register for signal <register<25><0>>.
+    Found 1-bit register for signal <register<24><15>>.
+    Found 1-bit register for signal <register<24><14>>.
+    Found 1-bit register for signal <register<24><13>>.
+    Found 1-bit register for signal <register<24><12>>.
+    Found 1-bit register for signal <register<24><11>>.
+    Found 1-bit register for signal <register<24><10>>.
+    Found 1-bit register for signal <register<24><9>>.
+    Found 1-bit register for signal <register<24><8>>.
+    Found 1-bit register for signal <register<24><7>>.
+    Found 1-bit register for signal <register<24><6>>.
+    Found 1-bit register for signal <register<24><5>>.
+    Found 1-bit register for signal <register<24><4>>.
+    Found 1-bit register for signal <register<24><3>>.
+    Found 1-bit register for signal <register<24><2>>.
+    Found 1-bit register for signal <register<24><1>>.
+    Found 1-bit register for signal <register<24><0>>.
+    Found 1-bit register for signal <register<23><15>>.
+    Found 1-bit register for signal <register<23><14>>.
+    Found 1-bit register for signal <register<23><13>>.
+    Found 1-bit register for signal <register<23><12>>.
+    Found 1-bit register for signal <register<23><11>>.
+    Found 1-bit register for signal <register<23><10>>.
+    Found 1-bit register for signal <register<23><9>>.
+    Found 1-bit register for signal <register<23><8>>.
+    Found 1-bit register for signal <register<23><7>>.
+    Found 1-bit register for signal <register<23><6>>.
+    Found 1-bit register for signal <register<23><5>>.
+    Found 1-bit register for signal <register<23><4>>.
+    Found 1-bit register for signal <register<23><3>>.
+    Found 1-bit register for signal <register<23><2>>.
+    Found 1-bit register for signal <register<23><1>>.
+    Found 1-bit register for signal <register<23><0>>.
+    Found 1-bit register for signal <register<22><15>>.
+    Found 1-bit register for signal <register<22><14>>.
+    Found 1-bit register for signal <register<22><13>>.
+    Found 1-bit register for signal <register<22><12>>.
+    Found 1-bit register for signal <register<22><11>>.
+    Found 1-bit register for signal <register<22><10>>.
+    Found 1-bit register for signal <register<22><9>>.
+    Found 1-bit register for signal <register<22><8>>.
+    Found 1-bit register for signal <register<22><7>>.
+    Found 1-bit register for signal <register<22><6>>.
+    Found 1-bit register for signal <register<22><5>>.
+    Found 1-bit register for signal <register<22><4>>.
+    Found 1-bit register for signal <register<22><3>>.
+    Found 1-bit register for signal <register<22><2>>.
+    Found 1-bit register for signal <register<22><1>>.
+    Found 1-bit register for signal <register<22><0>>.
+    Found 1-bit register for signal <register<21><15>>.
+    Found 1-bit register for signal <register<21><14>>.
+    Found 1-bit register for signal <register<21><13>>.
+    Found 1-bit register for signal <register<21><12>>.
+    Found 1-bit register for signal <register<21><11>>.
+    Found 1-bit register for signal <register<21><10>>.
+    Found 1-bit register for signal <register<21><9>>.
+    Found 1-bit register for signal <register<21><8>>.
+    Found 1-bit register for signal <register<21><7>>.
+    Found 1-bit register for signal <register<21><6>>.
+    Found 1-bit register for signal <register<21><5>>.
+    Found 1-bit register for signal <register<21><4>>.
+    Found 1-bit register for signal <register<21><3>>.
+    Found 1-bit register for signal <register<21><2>>.
+    Found 1-bit register for signal <register<21><1>>.
+    Found 1-bit register for signal <register<21><0>>.
+    Found 1-bit register for signal <register<20><15>>.
+    Found 1-bit register for signal <register<20><14>>.
+    Found 1-bit register for signal <register<20><13>>.
+    Found 1-bit register for signal <register<20><12>>.
+    Found 1-bit register for signal <register<20><11>>.
+    Found 1-bit register for signal <register<20><10>>.
+    Found 1-bit register for signal <register<20><9>>.
+    Found 1-bit register for signal <register<20><8>>.
+    Found 1-bit register for signal <register<20><7>>.
+    Found 1-bit register for signal <register<20><6>>.
+    Found 1-bit register for signal <register<20><5>>.
+    Found 1-bit register for signal <register<20><4>>.
+    Found 1-bit register for signal <register<20><3>>.
+    Found 1-bit register for signal <register<20><2>>.
+    Found 1-bit register for signal <register<20><1>>.
+    Found 1-bit register for signal <register<20><0>>.
+    Found 1-bit register for signal <register<19><15>>.
+    Found 1-bit register for signal <register<19><14>>.
+    Found 1-bit register for signal <register<19><13>>.
+    Found 1-bit register for signal <register<19><12>>.
+    Found 1-bit register for signal <register<19><11>>.
+    Found 1-bit register for signal <register<19><10>>.
+    Found 1-bit register for signal <register<19><9>>.
+    Found 1-bit register for signal <register<19><8>>.
+    Found 1-bit register for signal <register<19><7>>.
+    Found 1-bit register for signal <register<19><6>>.
+    Found 1-bit register for signal <register<19><5>>.
+    Found 1-bit register for signal <register<19><4>>.
+    Found 1-bit register for signal <register<19><3>>.
+    Found 1-bit register for signal <register<19><2>>.
+    Found 1-bit register for signal <register<19><1>>.
+    Found 1-bit register for signal <register<19><0>>.
+    Found 1-bit register for signal <register<18><15>>.
+    Found 1-bit register for signal <register<18><14>>.
+    Found 1-bit register for signal <register<18><13>>.
+    Found 1-bit register for signal <register<18><12>>.
+    Found 1-bit register for signal <register<18><11>>.
+    Found 1-bit register for signal <register<18><10>>.
+    Found 1-bit register for signal <register<18><9>>.
+    Found 1-bit register for signal <register<18><8>>.
+    Found 1-bit register for signal <register<18><7>>.
+    Found 1-bit register for signal <register<18><6>>.
+    Found 1-bit register for signal <register<18><5>>.
+    Found 1-bit register for signal <register<18><4>>.
+    Found 1-bit register for signal <register<18><3>>.
+    Found 1-bit register for signal <register<18><2>>.
+    Found 1-bit register for signal <register<18><1>>.
+    Found 1-bit register for signal <register<18><0>>.
+    Found 1-bit register for signal <register<17><15>>.
+    Found 1-bit register for signal <register<17><14>>.
+    Found 1-bit register for signal <register<17><13>>.
+    Found 1-bit register for signal <register<17><12>>.
+    Found 1-bit register for signal <register<17><11>>.
+    Found 1-bit register for signal <register<17><10>>.
+    Found 1-bit register for signal <register<17><9>>.
+    Found 1-bit register for signal <register<17><8>>.
+    Found 1-bit register for signal <register<17><7>>.
+    Found 1-bit register for signal <register<17><6>>.
+    Found 1-bit register for signal <register<17><5>>.
+    Found 1-bit register for signal <register<17><4>>.
+    Found 1-bit register for signal <register<17><3>>.
+    Found 1-bit register for signal <register<17><2>>.
+    Found 1-bit register for signal <register<17><1>>.
+    Found 1-bit register for signal <register<17><0>>.
+    Found 1-bit register for signal <register<16><15>>.
+    Found 1-bit register for signal <register<16><14>>.
+    Found 1-bit register for signal <register<16><13>>.
+    Found 1-bit register for signal <register<16><12>>.
+    Found 1-bit register for signal <register<16><11>>.
+    Found 1-bit register for signal <register<16><10>>.
+    Found 1-bit register for signal <register<16><9>>.
+    Found 1-bit register for signal <register<16><8>>.
+    Found 1-bit register for signal <register<16><7>>.
+    Found 1-bit register for signal <register<16><6>>.
+    Found 1-bit register for signal <register<16><5>>.
+    Found 1-bit register for signal <register<16><4>>.
+    Found 1-bit register for signal <register<16><3>>.
+    Found 1-bit register for signal <register<16><2>>.
+    Found 1-bit register for signal <register<16><1>>.
+    Found 1-bit register for signal <register<16><0>>.
+    Found 1-bit register for signal <register<15><15>>.
+    Found 1-bit register for signal <register<15><14>>.
+    Found 1-bit register for signal <register<15><13>>.
+    Found 1-bit register for signal <register<15><12>>.
+    Found 1-bit register for signal <register<15><11>>.
+    Found 1-bit register for signal <register<15><10>>.
+    Found 1-bit register for signal <register<15><9>>.
+    Found 1-bit register for signal <register<15><8>>.
+    Found 1-bit register for signal <register<15><7>>.
+    Found 1-bit register for signal <register<15><6>>.
+    Found 1-bit register for signal <register<15><5>>.
+    Found 1-bit register for signal <register<15><4>>.
+    Found 1-bit register for signal <register<15><3>>.
+    Found 1-bit register for signal <register<15><2>>.
+    Found 1-bit register for signal <register<15><1>>.
+    Found 1-bit register for signal <register<15><0>>.
+    Found 1-bit register for signal <register<14><15>>.
+    Found 1-bit register for signal <register<14><14>>.
+    Found 1-bit register for signal <register<14><13>>.
+    Found 1-bit register for signal <register<14><12>>.
+    Found 1-bit register for signal <register<14><11>>.
+    Found 1-bit register for signal <register<14><10>>.
+    Found 1-bit register for signal <register<14><9>>.
+    Found 1-bit register for signal <register<14><8>>.
+    Found 1-bit register for signal <register<14><7>>.
+    Found 1-bit register for signal <register<14><6>>.
+    Found 1-bit register for signal <register<14><5>>.
+    Found 1-bit register for signal <register<14><4>>.
+    Found 1-bit register for signal <register<14><3>>.
+    Found 1-bit register for signal <register<14><2>>.
+    Found 1-bit register for signal <register<14><1>>.
+    Found 1-bit register for signal <register<14><0>>.
+    Found 1-bit register for signal <register<13><15>>.
+    Found 1-bit register for signal <register<13><14>>.
+    Found 1-bit register for signal <register<13><13>>.
+    Found 1-bit register for signal <register<13><12>>.
+    Found 1-bit register for signal <register<13><11>>.
+    Found 1-bit register for signal <register<13><10>>.
+    Found 1-bit register for signal <register<13><9>>.
+    Found 1-bit register for signal <register<13><8>>.
+    Found 1-bit register for signal <register<13><7>>.
+    Found 1-bit register for signal <register<13><6>>.
+    Found 1-bit register for signal <register<13><5>>.
+    Found 1-bit register for signal <register<13><4>>.
+    Found 1-bit register for signal <register<13><3>>.
+    Found 1-bit register for signal <register<13><2>>.
+    Found 1-bit register for signal <register<13><1>>.
+    Found 1-bit register for signal <register<13><0>>.
+    Found 1-bit register for signal <register<12><15>>.
+    Found 1-bit register for signal <register<12><14>>.
+    Found 1-bit register for signal <register<12><13>>.
+    Found 1-bit register for signal <register<12><12>>.
+    Found 1-bit register for signal <register<12><11>>.
+    Found 1-bit register for signal <register<12><10>>.
+    Found 1-bit register for signal <register<12><9>>.
+    Found 1-bit register for signal <register<12><8>>.
+    Found 1-bit register for signal <register<12><7>>.
+    Found 1-bit register for signal <register<12><6>>.
+    Found 1-bit register for signal <register<12><5>>.
+    Found 1-bit register for signal <register<12><4>>.
+    Found 1-bit register for signal <register<12><3>>.
+    Found 1-bit register for signal <register<12><2>>.
+    Found 1-bit register for signal <register<12><1>>.
+    Found 1-bit register for signal <register<12><0>>.
+    Found 1-bit register for signal <register<11><15>>.
+    Found 1-bit register for signal <register<11><14>>.
+    Found 1-bit register for signal <register<11><13>>.
+    Found 1-bit register for signal <register<11><12>>.
+    Found 1-bit register for signal <register<11><11>>.
+    Found 1-bit register for signal <register<11><10>>.
+    Found 1-bit register for signal <register<11><9>>.
+    Found 1-bit register for signal <register<11><8>>.
+    Found 1-bit register for signal <register<11><7>>.
+    Found 1-bit register for signal <register<11><6>>.
+    Found 1-bit register for signal <register<11><5>>.
+    Found 1-bit register for signal <register<11><4>>.
+    Found 1-bit register for signal <register<11><3>>.
+    Found 1-bit register for signal <register<11><2>>.
+    Found 1-bit register for signal <register<11><1>>.
+    Found 1-bit register for signal <register<11><0>>.
+    Found 1-bit register for signal <register<10><15>>.
+    Found 1-bit register for signal <register<10><14>>.
+    Found 1-bit register for signal <register<10><13>>.
+    Found 1-bit register for signal <register<10><12>>.
+    Found 1-bit register for signal <register<10><11>>.
+    Found 1-bit register for signal <register<10><10>>.
+    Found 1-bit register for signal <register<10><9>>.
+    Found 1-bit register for signal <register<10><8>>.
+    Found 1-bit register for signal <register<10><7>>.
+    Found 1-bit register for signal <register<10><6>>.
+    Found 1-bit register for signal <register<10><5>>.
+    Found 1-bit register for signal <register<10><4>>.
+    Found 1-bit register for signal <register<10><3>>.
+    Found 1-bit register for signal <register<10><2>>.
+    Found 1-bit register for signal <register<10><1>>.
+    Found 1-bit register for signal <register<10><0>>.
+    Found 1-bit register for signal <register<9><15>>.
+    Found 1-bit register for signal <register<9><14>>.
+    Found 1-bit register for signal <register<9><13>>.
+    Found 1-bit register for signal <register<9><12>>.
+    Found 1-bit register for signal <register<9><11>>.
+    Found 1-bit register for signal <register<9><10>>.
+    Found 1-bit register for signal <register<9><9>>.
+    Found 1-bit register for signal <register<9><8>>.
+    Found 1-bit register for signal <register<9><7>>.
+    Found 1-bit register for signal <register<9><6>>.
+    Found 1-bit register for signal <register<9><5>>.
+    Found 1-bit register for signal <register<9><4>>.
+    Found 1-bit register for signal <register<9><3>>.
+    Found 1-bit register for signal <register<9><2>>.
+    Found 1-bit register for signal <register<9><1>>.
+    Found 1-bit register for signal <register<9><0>>.
+    Found 1-bit register for signal <register<8><15>>.
+    Found 1-bit register for signal <register<8><14>>.
+    Found 1-bit register for signal <register<8><13>>.
+    Found 1-bit register for signal <register<8><12>>.
+    Found 1-bit register for signal <register<8><11>>.
+    Found 1-bit register for signal <register<8><10>>.
+    Found 1-bit register for signal <register<8><9>>.
+    Found 1-bit register for signal <register<8><8>>.
+    Found 1-bit register for signal <register<8><7>>.
+    Found 1-bit register for signal <register<8><6>>.
+    Found 1-bit register for signal <register<8><5>>.
+    Found 1-bit register for signal <register<8><4>>.
+    Found 1-bit register for signal <register<8><3>>.
+    Found 1-bit register for signal <register<8><2>>.
+    Found 1-bit register for signal <register<8><1>>.
+    Found 1-bit register for signal <register<8><0>>.
+    Found 1-bit register for signal <register<7><15>>.
+    Found 1-bit register for signal <register<7><14>>.
+    Found 1-bit register for signal <register<7><13>>.
+    Found 1-bit register for signal <register<7><12>>.
+    Found 1-bit register for signal <register<7><11>>.
+    Found 1-bit register for signal <register<7><10>>.
+    Found 1-bit register for signal <register<7><9>>.
+    Found 1-bit register for signal <register<7><8>>.
+    Found 1-bit register for signal <register<7><7>>.
+    Found 1-bit register for signal <register<7><6>>.
+    Found 1-bit register for signal <register<7><5>>.
+    Found 1-bit register for signal <register<7><4>>.
+    Found 1-bit register for signal <register<7><3>>.
+    Found 1-bit register for signal <register<7><2>>.
+    Found 1-bit register for signal <register<7><1>>.
+    Found 1-bit register for signal <register<7><0>>.
+    Found 1-bit register for signal <register<6><15>>.
+    Found 1-bit register for signal <register<6><14>>.
+    Found 1-bit register for signal <register<6><13>>.
+    Found 1-bit register for signal <register<6><12>>.
+    Found 1-bit register for signal <register<6><11>>.
+    Found 1-bit register for signal <register<6><10>>.
+    Found 1-bit register for signal <register<6><9>>.
+    Found 1-bit register for signal <register<6><8>>.
+    Found 1-bit register for signal <register<6><7>>.
+    Found 1-bit register for signal <register<6><6>>.
+    Found 1-bit register for signal <register<6><5>>.
+    Found 1-bit register for signal <register<6><4>>.
+    Found 1-bit register for signal <register<6><3>>.
+    Found 1-bit register for signal <register<6><2>>.
+    Found 1-bit register for signal <register<6><1>>.
+    Found 1-bit register for signal <register<6><0>>.
+    Found 1-bit register for signal <register<5><15>>.
+    Found 1-bit register for signal <register<5><14>>.
+    Found 1-bit register for signal <register<5><13>>.
+    Found 1-bit register for signal <register<5><12>>.
+    Found 1-bit register for signal <register<5><11>>.
+    Found 1-bit register for signal <register<5><10>>.
+    Found 1-bit register for signal <register<5><9>>.
+    Found 1-bit register for signal <register<5><8>>.
+    Found 1-bit register for signal <register<5><7>>.
+    Found 1-bit register for signal <register<5><6>>.
+    Found 1-bit register for signal <register<5><5>>.
+    Found 1-bit register for signal <register<5><4>>.
+    Found 1-bit register for signal <register<5><3>>.
+    Found 1-bit register for signal <register<5><2>>.
+    Found 1-bit register for signal <register<5><1>>.
+    Found 1-bit register for signal <register<5><0>>.
+    Found 1-bit register for signal <register<4><15>>.
+    Found 1-bit register for signal <register<4><14>>.
+    Found 1-bit register for signal <register<4><13>>.
+    Found 1-bit register for signal <register<4><12>>.
+    Found 1-bit register for signal <register<4><11>>.
+    Found 1-bit register for signal <register<4><10>>.
+    Found 1-bit register for signal <register<4><9>>.
+    Found 1-bit register for signal <register<4><8>>.
+    Found 1-bit register for signal <register<4><7>>.
+    Found 1-bit register for signal <register<4><6>>.
+    Found 1-bit register for signal <register<4><5>>.
+    Found 1-bit register for signal <register<4><4>>.
+    Found 1-bit register for signal <register<4><3>>.
+    Found 1-bit register for signal <register<4><2>>.
+    Found 1-bit register for signal <register<4><1>>.
+    Found 1-bit register for signal <register<4><0>>.
+    Found 1-bit register for signal <register<3><15>>.
+    Found 1-bit register for signal <register<3><14>>.
+    Found 1-bit register for signal <register<3><13>>.
+    Found 1-bit register for signal <register<3><12>>.
+    Found 1-bit register for signal <register<3><11>>.
+    Found 1-bit register for signal <register<3><10>>.
+    Found 1-bit register for signal <register<3><9>>.
+    Found 1-bit register for signal <register<3><8>>.
+    Found 1-bit register for signal <register<3><7>>.
+    Found 1-bit register for signal <register<3><6>>.
+    Found 1-bit register for signal <register<3><5>>.
+    Found 1-bit register for signal <register<3><4>>.
+    Found 1-bit register for signal <register<3><3>>.
+    Found 1-bit register for signal <register<3><2>>.
+    Found 1-bit register for signal <register<3><1>>.
+    Found 1-bit register for signal <register<3><0>>.
+    Found 1-bit register for signal <register<2><15>>.
+    Found 1-bit register for signal <register<2><14>>.
+    Found 1-bit register for signal <register<2><13>>.
+    Found 1-bit register for signal <register<2><12>>.
+    Found 1-bit register for signal <register<2><11>>.
+    Found 1-bit register for signal <register<2><10>>.
+    Found 1-bit register for signal <register<2><9>>.
+    Found 1-bit register for signal <register<2><8>>.
+    Found 1-bit register for signal <register<2><7>>.
+    Found 1-bit register for signal <register<2><6>>.
+    Found 1-bit register for signal <register<2><5>>.
+    Found 1-bit register for signal <register<2><4>>.
+    Found 1-bit register for signal <register<2><3>>.
+    Found 1-bit register for signal <register<2><2>>.
+    Found 1-bit register for signal <register<2><1>>.
+    Found 1-bit register for signal <register<2><0>>.
+    Found 1-bit register for signal <register<1><15>>.
+    Found 1-bit register for signal <register<1><14>>.
+    Found 1-bit register for signal <register<1><13>>.
+    Found 1-bit register for signal <register<1><12>>.
+    Found 1-bit register for signal <register<1><11>>.
+    Found 1-bit register for signal <register<1><10>>.
+    Found 1-bit register for signal <register<1><9>>.
+    Found 1-bit register for signal <register<1><8>>.
+    Found 1-bit register for signal <register<1><7>>.
+    Found 1-bit register for signal <register<1><6>>.
+    Found 1-bit register for signal <register<1><5>>.
+    Found 1-bit register for signal <register<1><4>>.
+    Found 1-bit register for signal <register<1><3>>.
+    Found 1-bit register for signal <register<1><2>>.
+    Found 1-bit register for signal <register<1><1>>.
+    Found 1-bit register for signal <register<1><0>>.
+    Found 16-bit register for signal <AR>.
+    Found 16-bit register for signal <BR>.
+    Found 1-bit register for signal <register<31><15>>.
+    Found 16-bit 32-to-1 multiplexer for signal <RA[4]_register[31][15]_wide_mux_52_OUT> created at line 40.
+    Found 16-bit 32-to-1 multiplexer for signal <RB[4]_register[31][15]_wide_mux_53_OUT> created at line 41.
+    Found 16-bit 4-to-1 multiplexer for signal <A> created at line 26.
+    Found 16-bit 4-to-1 multiplexer for signal <BI> created at line 28.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><15><0:0>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><14><15:15>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><13><14:14>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><12><13:13>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><11><12:12>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><10><11:11>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><9><10:10>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><8><9:9>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><7><8:8>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><6><7:7>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><5><6:6>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><4><5:5>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><3><0:0>> (without init value) have a constant value of 1 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><2><4:4>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><1><2:2>> (without init value) have a constant value of 0 in block <Register_bank>.
+    WARNING:Xst:2404 -  FFs/Latches <register<0><0><1:1>> (without init value) have a constant value of 0 in block <Register_bank>.
+    Summary:
+	inferred 528 D-type flip-flop(s).
+	inferred  37 Multiplexer(s).
+Unit <Register_bank> synthesized.
+
+Synthesizing Unit <stall_control>.
+    Related source file is "D:\clg\CO_lab\Assignment1\stall_control.v".
+    Found 1-bit register for signal <q1>.
+    Found 1-bit register for signal <q2>.
+    Found 1-bit register for signal <stall_pm>.
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <stall_control> synthesized.
+
+Synthesizing Unit <write_back>.
+    Related source file is "D:\clg\CO_lab\Assignment1\write_back.v".
+    Found 16-bit register for signal <ans_wb>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <write_back> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 452
+ 16-bit adder                                          : 4
+ 2-bit adder                                           : 448
+# Registers                                            : 66
+ 1-bit register                                        : 15
+ 16-bit register                                       : 42
+ 2-bit register                                        : 1
+ 32-bit register                                       : 1
+ 5-bit register                                        : 6
+ 6-bit register                                        : 1
+# Comparators                                          : 6
+ 5-bit comparator equal                                : 6
+# Multiplexers                                         : 68
+ 1-bit 2-to-1 multiplexer                              : 2
+ 16-bit 2-to-1 multiplexer                             : 55
+ 16-bit 32-to-1 multiplexer                            : 2
+ 16-bit 4-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 2
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 57
+ 1-bit xor2                                            : 56
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/d_memory.ngc>.
+Reading core <ipcore_dir/pm_memory.ngc>.
+Loading core <d_memory> for timing and area information for instance <d>.
+Loading core <pm_memory> for timing and area information for instance <p1>.
+INFO:Xst:2261 - The FF/Latch <op_dec_0> in Unit <a7> is equivalent to the following FF/Latch, which will be removed : <q2> 
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 228
+ 16-bit adder                                          : 4
+ 2-bit adder carry in                                  : 224
+# Registers                                            : 757
+ Flip-Flops                                            : 757
+# Comparators                                          : 6
+ 5-bit comparator equal                                : 6
+# Multiplexers                                         : 113
+ 1-bit 2-to-1 multiplexer                              : 18
+ 1-bit 4-to-1 multiplexer                              : 32
+ 16-bit 2-to-1 multiplexer                             : 54
+ 16-bit 32-to-1 multiplexer                            : 2
+ 2-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 2
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Xors                                                 : 57
+ 1-bit xor2                                            : 56
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <op_dec_0> in Unit <Dependency_check_block> is equivalent to the following FF/Latch, which will be removed : <q2> 
+
+Optimizing unit <top> ...
+
+Optimizing unit <ALU_16bit> ...
+
+Optimizing unit <wallace_16bit> ...
+
+Optimizing unit <Data_memory> ...
+
+Optimizing unit <Dependency_check_block> ...
+
+Optimizing unit <jump_control_block> ...
+
+Optimizing unit <prog_memory> ...
+
+Optimizing unit <Register_bank> ...
+
+Optimizing unit <stall_control> ...
+
+Optimizing unit <write_back> ...
+INFO:Xst:2261 - The FF/Latch <a7/op_dec_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_26> 
+INFO:Xst:2261 - The FF/Latch <a7/op_dec_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_27> 
+INFO:Xst:2261 - The FF/Latch <a7/op_dec_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_28> 
+INFO:Xst:2261 - The FF/Latch <a7/op_dec_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_29> 
+INFO:Xst:2261 - The FF/Latch <a7/op_dec_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_30> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_0> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_0> 
+INFO:Xst:2261 - The FF/Latch <a7/op_dec_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_31> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_1> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_2> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_3> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_4> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_5> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_6> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_6> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_7> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_7> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_8> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_8> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_9> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_9> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_10> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_10> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_11> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_11> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_12> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_12> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_13> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_13> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_14> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_14> 
+INFO:Xst:2261 - The FF/Latch <a7/imm_15> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <a8/ins_prv_15> 
+INFO:Xst:2261 - The FF/Latch <a7/q1> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <a7/q3> <a5/q2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 3.
+FlipFlop a7/RW_dm_2 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 734
+ Flip-Flops                                            : 734
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2600
+#      GND                         : 3
+#      INV                         : 1
+#      LUT2                        : 32
+#      LUT3                        : 73
+#      LUT4                        : 188
+#      LUT5                        : 726
+#      LUT6                        : 1274
+#      MUXCY                       : 60
+#      MUXF7                       : 141
+#      MUXF8                       : 36
+#      VCC                         : 3
+#      XORCY                       : 63
+# FlipFlops/Latches                : 742
+#      FD                          : 528
+#      FDE                         : 15
+#      FDR                         : 165
+#      FDRE                        : 34
+# RAMS                             : 88
+#      RAMB36E1                    : 88
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 34
+#      IBUF                        : 18
+#      OBUF                        : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             742  out of  126800     0%  
+ Number of Slice LUTs:                 2294  out of  63400     3%  
+    Number used as Logic:              2294  out of  63400     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2434
+   Number with an unused Flip Flop:    1692  out of   2434    69%  
+   Number with an unused LUT:           140  out of   2434     5%  
+   Number of fully used LUT-FF pairs:   602  out of   2434    24%  
+   Number of unique control sets:        12
+
+IO Utilization: 
+ Number of IOs:                          35
+ Number of bonded IOBs:                  35  out of    210    16%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               88  out of    135    65%  
+    Number using Block RAM only:         88
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 830   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                               | Buffer(FF name)                                                                                                                                 | Load  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+a8/p1/N1(a8/p1/XST_GND:G)                                                                                                                                                                                                                                                    | NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)     | 106   |
+a2/d/N1(a2/d/XST_GND:G)                                                                                                                                                                                                                                                      | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B) | 46    |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/cascadelata_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/cascadelatb_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/cascadelata_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/cascadelatb_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/cascadelata_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/cascadelatb_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/cascadelata_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/cascadelatb_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/cascadelata_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/cascadelatb_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/v6_init.ram/cascadelata_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/v6_init.ram/cascadelatb_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/v6_init.ram/cascadelata_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/v6_init.ram/cascadelatb_tmp(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
+a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[48].ram.r/v6_init.ram/cascadelata_tmp(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[48].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[48].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[48].ram.r/v6_init.ram/cascadelatb_tmp(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[48].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[48].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[49].ram.r/v6_init.ram/cascadelata_tmp(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[49].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[49].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[49].ram.r/v6_init.ram/cascadelatb_tmp(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[49].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[49].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[50].ram.r/v6_init.ram/cascadelata_tmp(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[50].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[50].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[50].ram.r/v6_init.ram/cascadelatb_tmp(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[50].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[50].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[51].ram.r/v6_init.ram/cascadelata_tmp(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[51].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[51].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[51].ram.r/v6_init.ram/cascadelatb_tmp(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[51].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[51].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[52].ram.r/v6_init.ram/cascadelata_tmp(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[52].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[52].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[52].ram.r/v6_init.ram/cascadelatb_tmp(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[52].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(a8/p1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[52].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 14.976ns (Maximum Frequency: 66.772MHz)
+   Minimum input arrival time before clock: 9.043ns
+   Maximum output required time after clock: 0.877ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 14.976ns (frequency: 66.772MHz)
+  Total number of paths / destination ports: 23823561011 / 939
+-------------------------------------------------------------------------
+Delay:               14.976ns (Levels of Logic = 36)
+  Source:            a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_1 (FF)
+  Destination:       a4/current_address_tmp_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: a2/d/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_1 to a4/current_address_tmp_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             36   0.478   1.092  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe_1 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe<1>)
+     LUT6:I0->O            1   0.124   0.000  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_59 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_59)
+     MUXF7:I1->O           1   0.368   0.000  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_4_f7_3 (U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_4_f74)
+     MUXF8:I0->O          33   0.296   0.574  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_2_f8_3 (douta<4>)
+     end scope: 'a2/d:douta<4>'
+     LUT3:I2->O            3   0.124   0.730  a2/Mmux_ans_dm111 (ans_dm<4>)
+     LUT6:I3->O           16   0.124   0.519  a3/Mmux_B111 (a3/Mmux_B11)
+     LUT3:I2->O           32   0.124   0.929  a3/Mmux_B112 (B<4>)
+     LUT6:I2->O            1   0.124   0.776  a1/w1/f90/Madd_temp_Madd_cy<0>11_SW3 (N362)
+     LUT6:I2->O            3   0.124   0.435  a1/w1/f90/Madd_temp_Madd_cy<0>11 (a1/w1/f90/Madd_temp_Madd_cy<0>)
+     LUT6:I5->O            6   0.124   0.569  a1/w1/f129/Madd_temp_Madd_xor<0>11 (a1/w1/s<153>)
+     LUT6:I4->O            2   0.124   0.542  a1/w1/f174/Madd_temp_Madd_lut<0>1_SW0 (N143)
+     LUT5:I3->O            3   0.124   0.550  a1/w1/f185/Madd_temp_Madd_lut<0>1 (a1/w1/f185/Madd_temp_Madd_lut<0>)
+     LUT6:I4->O            6   0.124   0.454  a1/w1/f209/Madd_temp_Madd_lut<0>1 (a1/w1/f209/Madd_temp_Madd_lut<0>)
+     LUT6:I5->O            5   0.124   0.563  a1/w1/f212/Madd_temp_Madd_cy<0>12_SW0_SW0 (N219)
+     LUT6:I4->O            1   0.124   0.536  a1/w1/f212/Madd_temp_Madd_cy<0>12_SW7 (N454)
+     LUT6:I4->O            6   0.124   0.454  a1/w1/f212/Madd_temp_Madd_cy<0>12 (a1/w1/f212/Madd_temp_Madd_cy<0>)
+     LUT5:I4->O            1   0.124   0.536  a1/w1/f218/Madd_temp_Madd_cy<0>12 (a1/w1/f218/Madd_temp_Madd_cy<0>)
+     LUT6:I4->O            9   0.124   0.474  a1/Mmux_flag_ex<0>17_SW0 (N491)
+     LUT6:I5->O           26   0.124   0.572  a1/Mmux_flag_ex<0>19 (a1/Mmux_flag_ex<0>18)
+     LUT6:I5->O            1   0.124   0.000  a4/Madd_next_address_lut<0> (a4/Madd_next_address_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  a4/Madd_next_address_cy<0> (a4/Madd_next_address_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<1> (a4/Madd_next_address_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<2> (a4/Madd_next_address_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<3> (a4/Madd_next_address_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<4> (a4/Madd_next_address_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<5> (a4/Madd_next_address_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<6> (a4/Madd_next_address_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<7> (a4/Madd_next_address_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<8> (a4/Madd_next_address_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<9> (a4/Madd_next_address_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<10> (a4/Madd_next_address_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<11> (a4/Madd_next_address_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<12> (a4/Madd_next_address_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<13> (a4/Madd_next_address_cy<13>)
+     MUXCY:CI->O           0   0.029   0.000  a4/Madd_next_address_cy<14> (a4/Madd_next_address_cy<14>)
+     XORCY:CI->O           1   0.510   0.000  a4/Madd_next_address_xor<15> (a4/next_address<15>)
+     FDRE:D                    0.030          a4/current_address_tmp_15
+    ----------------------------------------
+    Total                     14.976ns (4.672ns logic, 10.305ns route)
+                                       (31.2% logic, 68.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 52970 / 376
+-------------------------------------------------------------------------
+Offset:              9.043ns (Levels of Logic = 26)
+  Source:            data_in<4> (PAD)
+  Destination:       a4/current_address_tmp_15 (FF)
+  Destination Clock: clk rising
+
+  Data Path: data_in<4> to a4/current_address_tmp_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.776  data_in_4_IBUF (data_in_4_IBUF)
+     LUT5:I1->O            1   0.124   0.776  a1/Mmux_ans_tmp445 (a1/Mmux_ans_tmp444)
+     LUT5:I1->O            1   0.124   0.776  a1/Mmux_ans_tmp449 (a1/Mmux_ans_tmp448)
+     LUT5:I1->O            2   0.124   0.925  a1/Mmux_ans_tmp4410 (a1/ans_tmp<4>)
+     LUT6:I1->O            1   0.124   0.919  a1/flag_ex<1><15>1 (a1/flag_ex<1><15>)
+     LUT6:I1->O            4   0.124   0.736  a1/flag_ex<1><15>2_SW0 (N394)
+     LUT6:I3->O           14   0.124   0.506  a1/Mmux_flag_ex<0>113_SW0 (N90)
+     LUT6:I5->O            1   0.124   0.000  a4/pc_mux_sel11_SW1_G (N673)
+     MUXF7:I1->O          21   0.368   0.846  a4/pc_mux_sel11_SW1 (N169)
+     LUT6:I3->O            1   0.124   0.000  a4/Madd_next_address_lut<0> (a4/Madd_next_address_lut<0>)
+     MUXCY:S->O            1   0.472   0.000  a4/Madd_next_address_cy<0> (a4/Madd_next_address_cy<0>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<1> (a4/Madd_next_address_cy<1>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<2> (a4/Madd_next_address_cy<2>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<3> (a4/Madd_next_address_cy<3>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<4> (a4/Madd_next_address_cy<4>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<5> (a4/Madd_next_address_cy<5>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<6> (a4/Madd_next_address_cy<6>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<7> (a4/Madd_next_address_cy<7>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<8> (a4/Madd_next_address_cy<8>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<9> (a4/Madd_next_address_cy<9>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<10> (a4/Madd_next_address_cy<10>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<11> (a4/Madd_next_address_cy<11>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<12> (a4/Madd_next_address_cy<12>)
+     MUXCY:CI->O           1   0.029   0.000  a4/Madd_next_address_cy<13> (a4/Madd_next_address_cy<13>)
+     MUXCY:CI->O           0   0.029   0.000  a4/Madd_next_address_cy<14> (a4/Madd_next_address_cy<14>)
+     XORCY:CI->O           1   0.510   0.000  a4/Madd_next_address_xor<15> (a4/next_address<15>)
+     FDRE:D                    0.030          a4/current_address_tmp_15
+    ----------------------------------------
+    Total                      9.043ns (2.783ns logic, 6.260ns route)
+                                       (30.8% logic, 69.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              0.877ns (Levels of Logic = 1)
+  Source:            a1/data_out_15 (FF)
+  Destination:       data_out<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: a1/data_out_15 to data_out<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.478   0.399  a1/data_out_15 (a1/data_out_15)
+     OBUF:I->O                 0.000          data_out_15_OBUF (data_out<15>)
+    ----------------------------------------
+    Total                      0.877ns (0.478ns logic, 0.399ns route)
+                                       (54.5% logic, 45.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   14.976|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 44.00 secs
+Total CPU time to Xst completion: 43.87 secs
+ 
+--> 
+
+Total memory usage is 4679208 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   22 (   0 filtered)
+Number of infos    :   29 (   0 filtered)
+

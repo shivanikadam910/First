@@ -1,0 +1,2 @@
+verilog work "ipcore_dir/p_memory.v"
+verilog work "program_memory.v"
